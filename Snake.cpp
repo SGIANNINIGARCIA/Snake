@@ -55,21 +55,47 @@ Snake::changeDirection(char direction){
 
 	switch(direction){
 		case 'L':
+			// If current direction is opposite, then disregard
+			if(currentDir == 'R'){
+				return;
+			}
+
 			movement.setX(-speed);
+			movement.setY(0.0);
 			break;
 
 		case 'R':
+
+			if(currentDir == 'L'){
+				return;
+			}
+
 			movement.setX(speed);
+			movement.setY(0.0);
 			break;
 
 		case 'U':
+
+			if(currentDir == 'D'){
+				return;
+			}
+
 			movement.setY(speed);
+			movement.setX(0.0);
 			break;
 
 		case 'D':
+
+			if(currentDir == 'U'){
+				return;
+			}
 			movement.setY(-speed);
+			movement.setX(0.0);
 			break;
 	}
+
+	// Set new direction
+	currentDir = direction;
 
 }
 
