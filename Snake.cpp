@@ -47,6 +47,8 @@ Snake::move(){
 void
 Snake::changeDirection(char direction){
 
+	std::cout << "movement exec" << std::endl;
+
 	switch(direction){
 		case 'L':
 			movement.setX(-speed);
