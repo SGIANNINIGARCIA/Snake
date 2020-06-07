@@ -44,6 +44,7 @@ Snake::move(){
 	this->position  + this->movement;
 }
 
+
 void
 Snake::changeDirection(char direction){
 
