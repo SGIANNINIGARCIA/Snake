@@ -143,6 +143,8 @@ void keyboard (unsigned char key, int xmouse, int ymouse) {
 		snake.changeDirection('R');
 		break;
 
+
+
 	case ' ':
 		glutDisplayFunc(display);
 		startGame();
