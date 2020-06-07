@@ -128,34 +128,19 @@ void keyboard (unsigned char key, int xmouse, int ymouse) {
 
 	switch (key){
 	case 'w':
-
+		snake.changeDirection('U');
 		break;
 
 	case 'a':
-
+		snake.changeDirection('L');
 		break;
 
 	case 's':
-
+		snake.changeDirection('D');
 		break;
 
 	case 'd':
-
-		break;
-
-	case 'i':
-
-		break;
-
-	case 'j':
-
-		break;
-
-	case 'k':
-
-		break;
-
-	case 'l':
+		snake.changeDirection('R');
 		break;
 
 	case ' ':
