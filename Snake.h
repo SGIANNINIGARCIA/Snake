@@ -16,6 +16,7 @@ class Snake {
 	Vector2d position;
 	Vector2d movement;
 	float    speed;
+	char currentDir;
 
 public:
 	Snake(float, float);

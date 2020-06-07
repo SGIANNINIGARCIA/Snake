@@ -144,7 +144,6 @@ void keyboard (unsigned char key, int xmouse, int ymouse) {
 		break;
 
 
-
 	case ' ':
 		glutDisplayFunc(display);
 		startGame();

@@ -11,12 +11,15 @@ Snake::Snake(float x, float y) {
 	this->position = Vector2d(x, y);
 	this->movement = Vector2d(0.00, 0.00);
 	this->speed = 0.002;
+	this->currentDir = ' ';
 
 }
 
 Snake::Snake() {
 	this->position = Vector2d(0, 0);
 	this->movement = Vector2d(0.2, 0.2);
+	this->speed = 0.002;
+	this->currentDir = ' ';
 
 }
 
@@ -48,7 +51,7 @@ Snake::move(){
 void
 Snake::changeDirection(char direction){
 
-	std::cout << "movement exec" << std::endl;
+
 
 	switch(direction){
 		case 'L':
