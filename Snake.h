@@ -7,6 +7,7 @@
 
 #include <glut/glut.h>
 #include "Vector2d.h"
+#include "Body.h"
 
 #ifndef SRC_SNAKE_H_
 #define SRC_SNAKE_H_
@@ -15,6 +16,7 @@ class Snake {
 
 	Vector2d position;
 	Vector2d movement;
+	std::vector<Body> body;
 	float    speed;
 	char currentDir;
 

@@ -46,7 +46,7 @@ void timer(int x){
 void createObjects(){
 
 	snake = Snake(0, 0);
-	byte = Byte(2 * ((double)rand() / (double)RAND_MAX) -1,2 * ((double)rand() / (double)RAND_MAX) -1, snake);
+	byte = Byte(0.5, 0.5, snake);
 
 }
 
