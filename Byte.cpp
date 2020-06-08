@@ -24,6 +24,7 @@ Byte::~Byte() {
 void
 Byte::draw(){
 
+	 glLoadIdentity();
 	 glColor3f(0.0, 1.0, 0.0);
 	 glBegin(GL_POLYGON);
 	  glVertex3f(this->position.getX() - 0.01, this->position.getY() + 0.01, 0.0);
@@ -44,7 +45,10 @@ Byte::placeByte(std::vector<Body>& body){
 	x = 2 * ((double)rand() / (double)RAND_MAX) -1;
     y = 2 * ((double)rand() / (double)RAND_MAX) -1;
 
-	this->position = Vector2d(x, y);
+	position.setX(x);
+	position.setY(y);
+
+	position.print();
 
 }
 

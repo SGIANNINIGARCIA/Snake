@@ -7,13 +7,13 @@
 
 #include "Snake.h"
 
-Snake::Snake(float x, float y, Byte byte) {
+Snake::Snake(float x, float y) {
 	this->position = Vector2d(x, y);
 	this->movement = Vector2d(0.00, 0.00);
 	this->speed = 0.01;
 	this->currentDir = ' ';
 	this->body.push_back(Body(position));
-	this->byte = byte;
+	this->byte = Byte(0.5, 0.5);
 
 
 
@@ -25,6 +25,7 @@ Snake::Snake() {
 	this->speed = 0.02;
 	this->currentDir = ' ';
 	this->body.push_back(Body(position));
+	this->byte = Byte(0.5, 0.5);
 
 }
 
@@ -38,6 +39,8 @@ Snake::draw(){
 	for (std::vector<Body>::iterator it = body.begin() ; it != body.end(); ++it){
 		it->draw();
 	}
+
+	byte.draw();
 
 }
 

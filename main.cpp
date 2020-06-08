@@ -19,7 +19,6 @@
 #include "Byte.h"
 
 Snake snake;
-Byte byte;
 
 
 
@@ -46,8 +45,7 @@ void timer(int x){
 void createObjects(){
 
 
-	byte = Byte(0.5, 0.5);
-	snake = Snake(0, 0, byte);
+	snake = Snake(0, 0);
 
 }
 
@@ -108,7 +106,7 @@ void display(){
 
 	glClear(GL_COLOR_BUFFER_BIT);
 	snake.draw();
-	byte.draw();
+	//byte.draw();
 	snake.move();
 	glutSwapBuffers();
 

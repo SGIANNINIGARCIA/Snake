@@ -24,7 +24,7 @@ class Snake {
 	char              currentDir;
 
 public:
-	Snake(float, float, Byte);
+	Snake(float, float);
 	Snake();
 	virtual ~Snake();
 	void draw();
