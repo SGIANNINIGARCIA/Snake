@@ -42,8 +42,8 @@ Byte::placeByte(){
 	//float y = 2 * ((double)rand() / (double)RAND_MAX) -1;
 
 	do {
-		float x = 2 * ((double)rand() / (double)RAND_MAX) -1;
-	    float y = 2 * ((double)rand() / (double)RAND_MAX) -1;
+		//float x = 2 * ((double)rand() / (double)RAND_MAX) -1;
+	    //float y = 2 * ((double)rand() / (double)RAND_MAX) -1;
 	} while(true);
 
 	//this->position = Vector2d(x, y);

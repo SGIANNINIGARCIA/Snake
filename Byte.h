@@ -22,8 +22,6 @@ public:
 	virtual ~Byte();
 	void draw();
 	void placeByte();
-	bool
-	bool collide(Vector2d);
 	Vector2d getPosition();
 };
 

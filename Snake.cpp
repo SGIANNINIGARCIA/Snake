@@ -56,6 +56,10 @@ Snake::move(){
 			newPos = temp;
 
 		}
+
+	if(eat() == true){
+		grow();
+	}
 }
 
 
@@ -120,10 +124,13 @@ Snake::eat(){
 
 	Vector2d bytePos = byte.getPosition();
 
-	for (std::vector<Body>::iterator it = body.begin() ; it != body.end(); ++it){
-
-
-
+	if(position.getX() < (bytePos.getX() + 0.01)
+			&& position.getX() > (bytePos.getX() - 0.01)
+			&& position.getY() < (bytePos.getY()  + 0.01)
+			&& position.getY() > (bytePos.getY() - 0.01)){
+		return true;
 	}
+
+	return false;
 }
 
