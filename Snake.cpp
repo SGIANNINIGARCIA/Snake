@@ -57,8 +57,12 @@ Snake::move(){
 
 		}
 
-	if(eat() == true){
+	// Check if the snake ate
+	if (eat() == true){
+
+		// If it did, grow
 		grow();
+		byte.placeByte(body);
 	}
 }
 
@@ -123,11 +127,13 @@ bool
 Snake::eat(){
 
 	Vector2d bytePos = byte.getPosition();
+	byte.getPosition().print();
 
 	if(position.getX() < (bytePos.getX() + 0.02)
 			&& position.getX() > (bytePos.getX() - 0.02)
 			&& position.getY() < (bytePos.getY()  + 0.02)
 			&& position.getY() > (bytePos.getY() - 0.02)){
+		std::cout << "it eat" << std::endl;
 		return true;
 	}
 

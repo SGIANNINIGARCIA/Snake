@@ -26,27 +26,26 @@ Byte::draw(){
 
 	 glColor3f(0.0, 1.0, 0.0);
 	 glBegin(GL_POLYGON);
-	  glVertex3f(position.getX() - 0.01, position.getY() + 0.01, 0.0);
-	  glVertex3f(position.getX() + 0.01, position.getY() + 0.01, 0.0);
-	  glVertex3f(position.getX() + 0.01, position.getY() - 0.01, 0.0);
-	  glVertex3f(position.getX() - 0.01, position.getY() - 0.01, 0.0);
+	  glVertex3f(this->position.getX() - 0.01, this->position.getY() + 0.01, 0.0);
+	  glVertex3f(this->position.getX() + 0.01, this->position.getY() + 0.01, 0.0);
+	  glVertex3f(this->position.getX() + 0.01, this->position.getY() - 0.01, 0.0);
+	  glVertex3f(this->position.getX() - 0.01, this->position.getY() - 0.01, 0.0);
 	 glEnd();
 
 }
 
 void
-Byte::placeByte(){
+Byte::placeByte(std::vector<Body>& body){
 
 
-	//float x = 2 * ((double)rand() / (double)RAND_MAX) -1;
-	//float y = 2 * ((double)rand() / (double)RAND_MAX) -1;
+	float x = 0;
+    float y = 0;
 
-	do {
-		//float x = 2 * ((double)rand() / (double)RAND_MAX) -1;
-	    //float y = 2 * ((double)rand() / (double)RAND_MAX) -1;
-	} while(true);
+	x = 2 * ((double)rand() / (double)RAND_MAX) -1;
+    y = 2 * ((double)rand() / (double)RAND_MAX) -1;
 
-	//this->position = Vector2d(x, y);
+	this->position = Vector2d(x, y);
+
 }
 
 Vector2d
@@ -54,4 +53,3 @@ Byte::getPosition(){
 	return this->position;
 
 }
-

@@ -13,7 +13,7 @@ Body::Body(Vector2d position) {
 }
 
 Body::Body() {
-	this->position = Vector2d(0, 0);
+	this->position = Vector2d(2, 2);
 
 }
 
