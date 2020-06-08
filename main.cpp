@@ -16,7 +16,7 @@
 #include <glut/glut.h>
 #include <iostream>
 #include "Snake.h"
-#include "Byte.h"
+#include "main.h"
 
 Snake snake;
 
@@ -70,21 +70,17 @@ void startGame(){
 
 }
 
-void wonScreen(){
+void lostScreen(){
 
-	glClear(GL_COLOR_BUFFER_BIT);
-
-
-		//renderText(0.0, 0.0, "Congratulations Player 1, you have won the game");
-		//renderText(0.0, -0.10, "Press the spacebar to reset the game");
-		//renderText(0.0, -0.20, ":)");
-
-		//renderText(0.0, 0.0, "Congratulations Player 2, you have won the game");
-		//renderText(0.0, -0.10, "Press the spacebar to reset the game");
-		//renderText(0.0, -0.20, ":)");
+	//glClear(GL_COLOR_BUFFER_BIT);
 
 
-	glutSwapBuffers();
+		renderText(0.0, 0.0, "You lost the game looser");
+		renderText(0.0, -0.20, ":)");
+		renderText(0.0, -0.10, "Press the spacebar to reset the game");
+
+
+	//glutSwapBuffers();
 
 }
 
@@ -106,8 +102,8 @@ void display(){
 
 	glClear(GL_COLOR_BUFFER_BIT);
 	snake.draw();
-	//byte.draw();
 	snake.move();
+	snake.collides();
 	glutSwapBuffers();
 
 }

@@ -30,7 +30,7 @@ Snake::Snake() {
 }
 
 Snake::~Snake() {
-	// TODO Auto-generated destructor stub
+
 }
 
 void
@@ -46,7 +46,9 @@ Snake::draw(){
 
 void
 Snake::move(){
+
 	this->position  + this->movement;
+
 
 	Vector2d newPos = position;
 	Vector2d temp;
@@ -141,5 +143,22 @@ Snake::eat(){
 	}
 
 	return false;
+}
+
+void
+Snake::collides(){
+
+	if(position.getX() > 1 || position.getX() < -1){
+		lostScreen();
+		this->movement = Vector2d(0.00, 0.00);
+		this->position = Vector2d(-5, -5);
+
+	} else if (position.getY() > 1 || position.getY() < -1){
+		lostScreen();
+		this->movement = Vector2d(0.00, 0.00);
+		this->position = Vector2d(-5, -5);
+
+	}
+
 }
 

@@ -9,6 +9,7 @@
 #include "Vector2d.h"
 #include "Body.h"
 #include "Byte.h"
+#include "main.h"
 
 #ifndef SRC_SNAKE_H_
 #define SRC_SNAKE_H_
@@ -32,6 +33,7 @@ public:
 	void grow();
 	void changeDirection(char);
 	bool eat();
+	void collides();
 };
 
 #endif /* SRC_SNAKE_H_ */
