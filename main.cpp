@@ -85,20 +85,6 @@ void lostScreen(){
 
 }
 
-
-void processScore(){
-
-	//if(leftPaddle.getScore() >= 3 || rightPaddle.getScore() >= 3){
-	//	std::cout << leftPaddle.getScore() << std::endl;
-	//	glutDisplayFunc(wonScreen);
-	//}
-
-	//renderText(-0.25, 0.90, "Player 1");
-	//renderText(-0.2, 0.80, std::to_string((int)leftPaddle.getScore()));
-	//renderText(0.15, 0.9, "Player 2");
-	//renderText(0.2, 0.8, std::to_string((int)rightPaddle.getScore()));
-}
-
 void display(){
 
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -112,11 +98,10 @@ void display(){
 void beginScreen(){
 
 	glClear(GL_COLOR_BUFFER_BIT);
-	renderText(-0.40, 0.20, "Player 1, use a to move right, d to move left, s to move down and w to move up.");
-	renderText(-0.4, 0.10, "Player 2, use j to move right, l to move left, k to move down and i to move up.");
-	renderText(-0.35, 0.0, "Press m to increase the speed of the puck, and n to decrease it.");
-	renderText(-0.25, -0.1, "Whenever you want to reset the game, press r.");
-	renderText(-.17,  -0.2, "The player who scores 3, wins.");
+	renderText(-0.40, 0.20, "Use A,W,S,D to move the snake.");
+	renderText(-0.4, 0.10, "Make sure to feed the snake so it grows.");
+	renderText(-0.35, 0.0, "Avoid hitting the walls or eating yourself");
+	renderText(-0.25, -0.1, "You win if you feed your snake three thousand times");
 	renderText(-0.4, -0.5, "Press the space bar to start the game.");
 	renderText(-0.4, -0.6, "Good luck!");
 	glutSwapBuffers();
