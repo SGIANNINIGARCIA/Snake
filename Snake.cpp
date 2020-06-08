@@ -30,7 +30,6 @@ Snake::~Snake() {
 void
 Snake::draw(){
 
-	glClear( GL_COLOR_BUFFER_BIT);
 	 glColor3f(0.0, 1.0, 0.0);
 	 glBegin(GL_POLYGON);
 	  glVertex3f(position.getX() - 0.01, position.getY() + 0.01, 0.0);
@@ -38,7 +37,6 @@ Snake::draw(){
 	  glVertex3f(position.getX() + 0.01, position.getY() - 0.01, 0.0);
 	  glVertex3f(position.getX() - 0.01, position.getY() - 0.01, 0.0);
 	 glEnd();
-	 glFlush();
 
 }
 
