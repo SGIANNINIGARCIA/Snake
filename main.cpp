@@ -67,7 +67,7 @@ void reshape(int w, int h){
 void startGame(){
 
 	createObjects();
-	glutTimerFunc(1000, timer, 60);
+	glutTimerFunc(1000, timer, 30);
 
 }
 

@@ -26,10 +26,10 @@ Body::draw(){
 
 	 glColor3f(0.0, 1.0, 0.0);
 	 glBegin(GL_POLYGON);
-	  glVertex3f(position.getX() - 0.01, position.getY() + 0.01, 0.0);
-	  glVertex3f(position.getX() + 0.01, position.getY() + 0.01, 0.0);
-	  glVertex3f(position.getX() + 0.01, position.getY() - 0.01, 0.0);
-	  glVertex3f(position.getX() - 0.01, position.getY() - 0.01, 0.0);
+	  glVertex3f(position.getX() - 0.02, position.getY() + 0.02, 0.0);
+	  glVertex3f(position.getX() + 0.02, position.getY() + 0.02, 0.0);
+	  glVertex3f(position.getX() + 0.02, position.getY() - 0.02, 0.0);
+	  glVertex3f(position.getX() - 0.02, position.getY() - 0.02, 0.0);
 	 glEnd();
 
 }

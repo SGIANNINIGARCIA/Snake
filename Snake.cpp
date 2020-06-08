@@ -10,16 +10,29 @@
 Snake::Snake(float x, float y) {
 	this->position = Vector2d(x, y);
 	this->movement = Vector2d(0.00, 0.00);
-	this->speed = 0.002;
+	this->speed = 0.01;
 	this->currentDir = ' ';
 	this->body.push_back(Body(position));
+	this->body.push_back(Body());
+	this->body.push_back(Body());
+	this->body.push_back(Body());
+	this->body.push_back(Body());
+		this->body.push_back(Body());
+		this->body.push_back(Body());
+		this->body.push_back(Body());
+			this->body.push_back(Body());
+			this->body.push_back(Body());
+			this->body.push_back(Body());
+				this->body.push_back(Body());
+				this->body.push_back(Body());
+
 
 }
 
 Snake::Snake() {
 	this->position = Vector2d(0, 0);
-	this->movement = Vector2d(0.2, 0.2);
-	this->speed = 0.002;
+	this->movement = Vector2d(0.0, 0.0);
+	this->speed = 0.02;
 	this->currentDir = ' ';
 	this->body.push_back(Body(position));
 
@@ -42,12 +55,16 @@ void
 Snake::move(){
 	this->position  + this->movement;
 
-	Vector2d oldPos;
+	Vector2d newPos = position;
+	Vector2d temp;
 
 
 	for (std::vector<Body>::iterator it = body.begin() ; it != body.end(); ++it){
 
-			it->setPosition(position);
+			temp = it->getPosition();
+			it->setPosition(newPos);
+			newPos = temp;
+
 		}
 }
 
