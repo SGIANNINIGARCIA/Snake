@@ -16,8 +16,10 @@
 #include <glut/glut.h>
 #include <iostream>
 #include "Snake.h"
+#include "Byte.h"
 
 Snake snake;
+Byte byte;
 
 
 
@@ -44,6 +46,7 @@ void timer(int x){
 void createObjects(){
 
 	snake = Snake(0, 0);
+	byte = Byte(0,0, snake);
 
 }
 
@@ -103,8 +106,8 @@ void processScore(){
 void display(){
 
 	glClear(GL_COLOR_BUFFER_BIT);
-	snake.move();
 	snake.draw();
+	snake.move();
 	glutSwapBuffers();
 
 }
