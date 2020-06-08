@@ -17,9 +17,11 @@ class Body {
 	Vector2d position;
 
 public:
-	Body(float, float);
+	Body(Vector2d);
 	Body();
 	virtual ~Body();
+	void setPosition(Vector2d);
+	Vector2d getPosition();
 	void draw();
 };
 

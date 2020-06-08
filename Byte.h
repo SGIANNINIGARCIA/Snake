@@ -16,7 +16,7 @@
 class Byte {
 
 	Vector2d position;
-	Snake snake;
+	Snake    snake;
 
 public:
 	Byte(float, float, Snake);

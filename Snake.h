@@ -14,11 +14,12 @@
 
 class Snake {
 
-	Vector2d position;
-	Vector2d movement;
+	// Position of the snake's head
+	Vector2d          position;
+	Vector2d          movement;
 	std::vector<Body> body;
-	float    speed;
-	char currentDir;
+	float             speed;
+	char              currentDir;
 
 public:
 	Snake(float, float);

@@ -7,8 +7,8 @@
 
 #include "Body.h"
 
-Body::Body(float x, float y) {
-	this->position = Vector2d(x, y);
+Body::Body(Vector2d position) {
+	this->position = position;
 
 }
 
@@ -32,5 +32,15 @@ Body::draw(){
 	  glVertex3f(position.getX() - 0.01, position.getY() - 0.01, 0.0);
 	 glEnd();
 
+}
+
+void
+Body::setPosition(Vector2d newPos){
+	this->position = newPos;
+}
+
+Vector2d
+Body::getPosition(){
+	return this->position;
 }
 

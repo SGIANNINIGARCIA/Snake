@@ -12,6 +12,7 @@ Snake::Snake(float x, float y) {
 	this->movement = Vector2d(0.00, 0.00);
 	this->speed = 0.002;
 	this->currentDir = ' ';
+	this->body.push_back(Body(position));
 
 }
 
@@ -20,6 +21,7 @@ Snake::Snake() {
 	this->movement = Vector2d(0.2, 0.2);
 	this->speed = 0.002;
 	this->currentDir = ' ';
+	this->body.push_back(Body(position));
 
 }
 
@@ -30,19 +32,23 @@ Snake::~Snake() {
 void
 Snake::draw(){
 
-	 glColor3f(0.0, 1.0, 0.0);
-	 glBegin(GL_POLYGON);
-	  glVertex3f(position.getX() - 0.01, position.getY() + 0.01, 0.0);
-	  glVertex3f(position.getX() + 0.01, position.getY() + 0.01, 0.0);
-	  glVertex3f(position.getX() + 0.01, position.getY() - 0.01, 0.0);
-	  glVertex3f(position.getX() - 0.01, position.getY() - 0.01, 0.0);
-	 glEnd();
+	for (std::vector<Body>::iterator it = body.begin() ; it != body.end(); ++it){
+		it->draw();
+	}
 
 }
 
 void
 Snake::move(){
 	this->position  + this->movement;
+
+	Vector2d oldPos;
+
+
+	for (std::vector<Body>::iterator it = body.begin() ; it != body.end(); ++it){
+
+			it->setPosition(position);
+		}
 }
 
 
