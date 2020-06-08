@@ -34,6 +34,9 @@ public:
 	void changeDirection(char);
 	bool eat();
 	void collides();
+	void test();
+	bool collideBoundaries();
+	bool collideItself();
 };
 
 #endif /* SRC_SNAKE_H_ */

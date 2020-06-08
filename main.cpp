@@ -46,6 +46,7 @@ void createObjects(){
 
 
 	snake = Snake(0, 0);
+	//snake.test();
 
 }
 

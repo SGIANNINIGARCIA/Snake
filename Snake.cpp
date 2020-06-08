@@ -148,17 +148,52 @@ Snake::eat(){
 void
 Snake::collides(){
 
-	if(position.getX() > 1 || position.getX() < -1){
+	if (collideItself() || collideBoundaries()){
 		lostScreen();
 		this->movement = Vector2d(0.00, 0.00);
 		this->position = Vector2d(-5, -5);
-
-	} else if (position.getY() > 1 || position.getY() < -1){
-		lostScreen();
-		this->movement = Vector2d(0.00, 0.00);
-		this->position = Vector2d(-5, -5);
-
 	}
 
+}
+
+bool
+Snake::collideItself(){
+
+	for (std::vector<Body>::iterator it = body.begin() + 1 ; it != body.end(); ++it){
+
+			if(position.getX() < (it->getPosition().getX() + 0.002)
+					&& position.getX() > (it->getPosition().getX() - 0.002)
+					&& position.getY() < (it->getPosition().getY() + 0.002)
+					&& position.getY() > (it->getPosition().getY() - 0.002)){
+				return true;
+			}
+	}
+
+	return false;
+
+}
+
+bool
+Snake::collideBoundaries(){
+
+	if(position.getX() > 1 || position.getX() < -1){
+		return true;
+
+	} else if (position.getY() > 1 || position.getY() < -1){
+		return true;
+
+	} else {
+		return false;
+	}
+
+}
+
+void
+Snake::test(){
+	int i;
+
+	for(i = 0; i < 3000; i++){
+		this->body.push_back(Body());
+	}
 }
 
