@@ -7,24 +7,14 @@
 
 #include "Snake.h"
 
-Snake::Snake(float x, float y) {
+Snake::Snake(float x, float y, Byte byte) {
 	this->position = Vector2d(x, y);
 	this->movement = Vector2d(0.00, 0.00);
 	this->speed = 0.01;
 	this->currentDir = ' ';
 	this->body.push_back(Body(position));
-	this->body.push_back(Body());
-	this->body.push_back(Body());
-	this->body.push_back(Body());
-	this->body.push_back(Body());
-		this->body.push_back(Body());
-		this->body.push_back(Body());
-		this->body.push_back(Body());
-			this->body.push_back(Body());
-			this->body.push_back(Body());
-			this->body.push_back(Body());
-				this->body.push_back(Body());
-				this->body.push_back(Body());
+	this->byte = byte;
+
 
 
 }
@@ -118,5 +108,22 @@ Snake::changeDirection(char direction){
 	// Set new direction
 	currentDir = direction;
 
+}
+
+void
+Snake::grow(){
+	this->body.push_back(Body());
+}
+
+bool
+Snake::eat(){
+
+	Vector2d bytePos = byte.getPosition();
+
+	for (std::vector<Body>::iterator it = body.begin() ; it != body.end(); ++it){
+
+
+
+	}
 }
 

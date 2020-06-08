@@ -7,7 +7,6 @@
 
 #include <glut/glut.h>
 #include "Vector2d.h"
-#include "Snake.h"
 #include <random>
 
 #ifndef SRC_BYTE_H_
@@ -16,14 +15,16 @@
 class Byte {
 
 	Vector2d position;
-	Snake    snake;
 
 public:
-	Byte(float, float, Snake);
+	Byte(float, float);
 	Byte();
 	virtual ~Byte();
 	void draw();
 	void placeByte();
+	bool
+	bool collide(Vector2d);
+	Vector2d getPosition();
 };
 
 #endif /* SRC_BYTE_H_ */

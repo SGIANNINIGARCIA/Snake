@@ -45,8 +45,9 @@ void timer(int x){
 
 void createObjects(){
 
-	snake = Snake(0, 0);
-	byte = Byte(0.5, 0.5, snake);
+
+	byte = Byte(0.5, 0.5);
+	snake = Snake(0, 0, byte);
 
 }
 

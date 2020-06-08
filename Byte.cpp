@@ -7,9 +7,8 @@
 
 #include "Byte.h"
 
-Byte::Byte(float x, float y, Snake snake) {
+Byte::Byte(float x, float y) {
 	this->position = Vector2d(x, y);
-	this->snake = snake;
 
 }
 
@@ -38,11 +37,21 @@ Byte::draw(){
 void
 Byte::placeByte(){
 
-	//2 * ((double)rand() / (double)RAND_MAX) -1,2 * ((double)rand();
 
-	this->position.print();
+	//float x = 2 * ((double)rand() / (double)RAND_MAX) -1;
+	//float y = 2 * ((double)rand() / (double)RAND_MAX) -1;
 
+	do {
+		float x = 2 * ((double)rand() / (double)RAND_MAX) -1;
+	    float y = 2 * ((double)rand() / (double)RAND_MAX) -1;
+	} while(true);
 
+	//this->position = Vector2d(x, y);
+}
+
+Vector2d
+Byte::getPosition(){
+	return this->position;
 
 }
 
