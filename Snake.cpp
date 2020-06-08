@@ -124,10 +124,10 @@ Snake::eat(){
 
 	Vector2d bytePos = byte.getPosition();
 
-	if(position.getX() < (bytePos.getX() + 0.01)
-			&& position.getX() > (bytePos.getX() - 0.01)
-			&& position.getY() < (bytePos.getY()  + 0.01)
-			&& position.getY() > (bytePos.getY() - 0.01)){
+	if(position.getX() < (bytePos.getX() + 0.02)
+			&& position.getX() > (bytePos.getX() - 0.02)
+			&& position.getY() < (bytePos.getY()  + 0.02)
+			&& position.getY() > (bytePos.getY() - 0.02)){
 		return true;
 	}
 
