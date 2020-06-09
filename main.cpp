@@ -1,9 +1,9 @@
 //============================================================================
-// Name        : pingPong.cpp
+// Name        : main.cpp
 // Author      : Sandro Giannini
 // Version     : 1.0
 // Copyright   : Your copyright notice
-// Description : Pong game in C++, Ansi-style
+// Description : Snake in C++, Ansi-style
 //============================================================================
 
 #if defined(WIN32)
@@ -19,8 +19,6 @@
 #include "main.h"
 
 Snake snake;
-
-
 
 
 void renderText(double x, double y, std::string s) {

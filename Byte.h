@@ -1,9 +1,10 @@
-/*
- * Byte.h
- *
- *  Created on: Jun 5, 2020
- *      Author: sandrogiannini
- */
+//============================================================================
+// Name        : Byte.h
+// Author      : Sandro Giannini
+// Version     : 1.0
+// Copyright   : Your copyright notice
+// Description : Snake in C++, Ansi-style
+//============================================================================
 
 #include <glut/glut.h>
 #include "Vector2d.h"

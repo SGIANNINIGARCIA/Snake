@@ -1,9 +1,9 @@
 //============================================================================
-// Name        : pingPong.cpp
+// Name        : main.h
 // Author      : Sandro Giannini
 // Version     : 1.0
 // Copyright   : Your copyright notice
-// Description : Pong game in C++, Ansi-style
+// Description : Snake in C++, Ansi-style
 //============================================================================
 
 

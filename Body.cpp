@@ -1,9 +1,10 @@
-/*
- * Body.cpp
- *
- *  Created on: Jun 5, 2020
- *      Author: sandrogiannini
- */
+//============================================================================
+// Name        : Body.cpp
+// Author      : Sandro Giannini
+// Version     : 1.0
+// Copyright   : Your copyright notice
+// Description : Snake in C++, Ansi-style
+//============================================================================
 
 #include "Body.h"
 

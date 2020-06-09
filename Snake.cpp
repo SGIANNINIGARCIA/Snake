@@ -1,16 +1,17 @@
-/*
- * Snake.cpp
- *
- *  Created on: Jun 5, 2020
- *      Author: sandrogiannini
- */
+//============================================================================
+// Name        : Snake.cpp
+// Author      : Sandro Giannini
+// Version     : 1.0
+// Copyright   : Your copyright notice
+// Description : Snake in C++, Ansi-style
+//============================================================================
 
 #include "Snake.h"
 
 Snake::Snake(float x, float y) {
 	this->position = Vector2d(x, y);
 	this->movement = Vector2d(0.00, 0.00);
-	this->speed = 0.01;
+	this->speed = 0.007;
 	this->currentDir = ' ';
 	this->body.push_back(Body(position));
 	this->byte = Byte(0.5, 0.5);
@@ -132,13 +133,11 @@ bool
 Snake::eat(){
 
 	Vector2d bytePos = byte.getPosition();
-	byte.getPosition().print();
 
 	if(position.getX() < (bytePos.getX() + 0.02)
 			&& position.getX() > (bytePos.getX() - 0.02)
 			&& position.getY() < (bytePos.getY()  + 0.02)
 			&& position.getY() > (bytePos.getY() - 0.02)){
-		std::cout << "it eat" << std::endl;
 		return true;
 	}
 
