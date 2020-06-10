@@ -15,10 +15,10 @@
 
 #include <glut/glut.h>
 #include <iostream>
-#include "Snake.h"
 #include "main.h"
+#include "Snake.h"
 
-Snake snake;
+Snake 	snake;
 
 
 void renderText(double x, double y, std::string s) {

@@ -81,7 +81,7 @@ Snake::changeDirection(char direction){
 	switch(direction){
 		case 'L':
 			// If current direction is opposite, then disregard
-			if(currentDir == 'R'){
+			if(currentDir == 'R' && body.size() > 1){
 				return;
 			}
 
@@ -91,7 +91,7 @@ Snake::changeDirection(char direction){
 
 		case 'R':
 
-			if(currentDir == 'L'){
+			if(currentDir == 'L' && body.size() > 1){
 				return;
 			}
 
@@ -101,7 +101,7 @@ Snake::changeDirection(char direction){
 
 		case 'U':
 
-			if(currentDir == 'D'){
+			if(currentDir == 'D' && body.size() > 1){
 				return;
 			}
 
@@ -111,7 +111,7 @@ Snake::changeDirection(char direction){
 
 		case 'D':
 
-			if(currentDir == 'U'){
+			if(currentDir == 'U' && body.size() > 1){
 				return;
 			}
 			movement.setY(-speed);

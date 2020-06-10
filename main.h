@@ -8,8 +8,6 @@
 
 
 
-#pragma once // Include guard, so you don't include multiple times.
+#pragma once
 
-// Declaration (it is okay to have multiple declarations, if they
-//              have a corresponding definition somewhere)
 void lostScreen();

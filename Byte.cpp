@@ -49,8 +49,6 @@ Byte::placeByte(std::vector<Body>& body){
 	position.setX(x);
 	position.setY(y);
 
-	position.print();
-
 }
 
 Vector2d
